@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create canvas</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="640" height="380" style="background-color : rgba(255, 189, 6, 0.87)"></canvas>
+
+    <script>
+        var canvas = document.getElementById("myCanvas");
+        var ctx= canvas.getContext("2d");
+        ctx.fillStyle="red";
+        ctx.textAlign = "center";
+        ctx.font= "40px cursive";
+        ctx.fillText("Hello world",325, 60);
+        ctx.strokeStyle="white";
+        ctx.font= "20px cursive";
+        ctx.strokeText("This is my canvas", 325, 100);
+        
+        ctx.fillStyle="red";
+        ctx.fillRect(200,325, 250,50);
+        ctx.clearRect(220,330,210,30);
+
+        ctx.fillStyle="red";
+        ctx.beginPath();
+        ctx.moveTo(325, 230);
+        ctx.lineTo(300,270);
+        ctx.lineTo(350,270);
+        ctx.closePath();
+        ctx.fill();
+
+        ctx.fillStyle = "black";
+        ctx.strokeStyle = "white";
+        ctx.lineWidth = "20";
+        ctx.beginPath();
+        ctx.arc(130,150,40,0,2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.arc(520,150,40,0,2 * Math.PI);
+        ctx.fill();
+        ctx.stroke();
+
+    </script>
+</body>
+</html>

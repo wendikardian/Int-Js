@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn For Loops</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="container-title">
+        <b>Natural Number Generator</b>
+    </div>
+    
+    
+    <label for="input_stop">Enter Any Number </label>
+    <input id="input_stop" type="number">
+    <button onclick="sequence()">Submit</button>
+    <div class="number">
+
+    </div>
+
+    </div>
+    
+</body>
+<script>
+    function sequence() {
+        var stop = Number(document.getElementById("input_stop").value);
+        var numberArea = document.querySelector(".number");
+        numberArea.innerHTML = "";
+
+        for (var i = 0; i <= stop; i++){
+            var numberArea = document.querySelector(".number");
+            numberArea.innerHTML += "<h2>" +i + "<br> </h2>";
+
+        }
+    }
+</script>
+</html>
